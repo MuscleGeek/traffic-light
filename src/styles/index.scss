@@ -1,13 +1,46 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+trafficLight {
+    background: black;
+    height: 415px;
+    width: 200px;
+    padding-left: 2rem;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 5px darkslategrey; 
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.trafficLight div {
+    height: 130px;
+    width: 140px;
+    padding-left: 4em;
+    padding-top: 5em;
+}
 
-*/
+.greyLight {
+    border-radius: 50%;
+    background: rgb(185, 183, 183);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.redLight {
+    background-color: rgb(137, 7, 7);
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px 10px rgb(193, 92, 92);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.yellowLight {
+    background-color: rgb(166, 166, 7);
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px 10px yellowgreen;
+    margin-bottom: 5px;
+}
+
+.greenLight {
+    background-color: rgb(6, 93, 6);
+    border-radius: 50%;
+    box-shadow: 20px 20px 50px 10px lightgreen;
+    margin-bottom: 5px;
+}
