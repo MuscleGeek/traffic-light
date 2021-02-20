@@ -1,24 +1,36 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState, useEffect } from "react";
 
 //create your first component
-export function Home() {
+export const TrafficLight = () => {
+	const [color, setColor] = useState("");
+	useEffect(() => {
+		const interval = setInterval(() => {
+			color === "red"
+				? setColor("green")
+				: color === "yellow"
+				? setColor("red")
+				: color === "green"
+				? setColor("yellow")
+				: null;
+		}, 1000);
+		return () => clearInterval(interval);
+	}, [color]);
 	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+		<div className="container d-flex justify-content-center pt-5">
+			<div className="trafficLight">
+				<div
+					className={color === "red" ? "redLight" : "greyLight"}
+					onClick={() => setColor("red")}
+				/>
+				<div
+					className={color === "yellow" ? "yellowLight" : "greyLight"}
+					onClick={() => setColor("yellow")}
+				/>
+				<div
+					className={color === "green" ? "greenLight" : "greyLight"}
+					onClick={() => setColor("green")}
+				/>
+			</div>
 		</div>
 	);
-}
+};

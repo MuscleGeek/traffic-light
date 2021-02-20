@@ -1,12 +1,28 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-trafficLight {
-    background: black;
+html {
+    height: 100%;
+}
+body {
+    
+    background: rgb(48,54,49);
+background: -moz-linear-gradient(180deg, rgba(48,54,49,0.7086367994463411) 39%, rgba(33,36,37,1) 70%);
+background: -webkit-linear-gradient(180deg, rgba(48,54,49,0.7086367994463411) 39%, rgba(33,36,37,1) 70%);
+background: linear-gradient(180deg, rgba(48,54,49,0.7086367994463411) 39%, rgba(33,36,37,1) 70%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#303631",endColorstr="#212425",GradientType=1);
+height: 100%;
+margin: 0;
+background-repeat: no-repeat;
+background-attachment: fixed;
+}
+.trafficLight {
+    background: rgb(246, 202, 3);
     height: 415px;
     width: 200px;
     padding-left: 2rem;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 10px 10px 5px darkslategrey; 
+    
 }
 
 .trafficLight div {
@@ -32,9 +48,9 @@ trafficLight {
 }
 
 .yellowLight {
-    background-color: rgb(166, 166, 7);
+    background-color: rgb(219, 219, 29);
     border-radius: 50%;
-    box-shadow: 20px 20px 50px 10px yellowgreen;
+    box-shadow: 20px 20px 50px 10px rgb(205, 202, 50);
     margin-bottom: 5px;
 }
 
